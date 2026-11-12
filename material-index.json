@@ -1,0 +1,12 @@
+[
+  {
+    "path": "fixtures/distribution.csv",
+    "sha256": "139b031591c827b275dcdab94418e44998704f59d3356849110747ba933c390c",
+    "size_bytes": 135
+  },
+  {
+    "path": "fixtures/inequality.json",
+    "sha256": "9bae474239873f9d3a1535bb40375efaa5c3cce25ad54895a7c5275928bf910a",
+    "size_bytes": 225
+  }
+]

@@ -1,0 +1,7 @@
+key,x,weight,group,case
+h1,0,1,g1,hand
+h2,10,3,g2,hand
+g1a,1,2,g1,crossing
+g1b,8,1,g1,crossing
+g2a,3,1,g2,crossing
+g2b,6,3,g2,crossing

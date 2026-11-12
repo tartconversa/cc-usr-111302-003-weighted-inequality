@@ -1,0 +1,11 @@
+{
+  "weight_kind": "representation",
+  "population_quantiles": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "zero_mean": "undefined",
+  "group_decomposition": "same_and_different_group_pairwise_terms",
+  "bootstrap_enabled": false
+}
