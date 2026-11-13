@@ -1,0 +1,177 @@
+{
+  "thresholds": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "cumulative_resource_share_at_quantiles": [
+    {
+      "quantile": 0.25,
+      "population_share": 0.25,
+      "cumulative_resource": 1.75,
+      "resource_share": 0.028688524590163935
+    },
+    {
+      "quantile": 0.5,
+      "population_share": 0.5,
+      "cumulative_resource": 14.0,
+      "resource_share": 0.22950819672131148
+    },
+    {
+      "quantile": 0.75,
+      "population_share": 0.75,
+      "cumulative_resource": 33.5,
+      "resource_share": 0.5491803278688525
+    },
+    {
+      "quantile": 1.0,
+      "population_share": 1.0,
+      "cumulative_resource": 61.0,
+      "resource_share": 1.0
+    }
+  ],
+  "bins": [
+    {
+      "bin_index": 0,
+      "lower_quantile": 0.0,
+      "upper_quantile": 0.25,
+      "population_share": 0.25,
+      "resource": 1.75,
+      "resource_share": 0.028688524590163935,
+      "fragments": [
+        {
+          "key": "h1",
+          "x": 0.0,
+          "weight": 1.0,
+          "fragment_of_record_weight": 1.0,
+          "weight_fraction_of_record": 1.0,
+          "split": false
+        },
+        {
+          "key": "g1a",
+          "x": 1.0,
+          "weight": 1.75,
+          "fragment_of_record_weight": 2.0,
+          "weight_fraction_of_record": 0.875,
+          "split": true
+        }
+      ]
+    },
+    {
+      "bin_index": 1,
+      "lower_quantile": 0.25,
+      "upper_quantile": 0.5,
+      "population_share": 0.25,
+      "resource": 12.25,
+      "resource_share": 0.20081967213114754,
+      "fragments": [
+        {
+          "key": "g1a",
+          "x": 1.0,
+          "weight": 0.25,
+          "fragment_of_record_weight": 2.0,
+          "weight_fraction_of_record": 0.125,
+          "split": false
+        },
+        {
+          "key": "g2a",
+          "x": 3.0,
+          "weight": 1.0,
+          "fragment_of_record_weight": 1.0,
+          "weight_fraction_of_record": 1.0,
+          "split": false
+        },
+        {
+          "key": "g2b",
+          "x": 6.0,
+          "weight": 1.5,
+          "fragment_of_record_weight": 3.0,
+          "weight_fraction_of_record": 0.5,
+          "split": true
+        }
+      ]
+    },
+    {
+      "bin_index": 2,
+      "lower_quantile": 0.5,
+      "upper_quantile": 0.75,
+      "population_share": 0.25,
+      "resource": 19.5,
+      "resource_share": 0.319672131147541,
+      "fragments": [
+        {
+          "key": "g2b",
+          "x": 6.0,
+          "weight": 1.5,
+          "fragment_of_record_weight": 3.0,
+          "weight_fraction_of_record": 0.5,
+          "split": false
+        },
+        {
+          "key": "g1b",
+          "x": 8.0,
+          "weight": 1.0,
+          "fragment_of_record_weight": 1.0,
+          "weight_fraction_of_record": 1.0,
+          "split": false
+        },
+        {
+          "key": "h2",
+          "x": 10.0,
+          "weight": 0.25,
+          "fragment_of_record_weight": 3.0,
+          "weight_fraction_of_record": 0.08333333333333333,
+          "split": true
+        }
+      ]
+    },
+    {
+      "bin_index": 3,
+      "lower_quantile": 0.75,
+      "upper_quantile": 1.0,
+      "population_share": 0.25,
+      "resource": 27.5,
+      "resource_share": 0.45081967213114754,
+      "fragments": [
+        {
+          "key": "h2",
+          "x": 10.0,
+          "weight": 2.75,
+          "fragment_of_record_weight": 3.0,
+          "weight_fraction_of_record": 0.9166666666666666,
+          "split": false
+        }
+      ]
+    }
+  ],
+  "boundary_splits": [
+    {
+      "at_quantile": 0.25,
+      "target_cumulative_weight": 2.75,
+      "key": "g1a",
+      "x": 1.0,
+      "split_off_weight_into_lower_bin": 1.75,
+      "record_weight_remaining_for_higher_bins": 0.25,
+      "original_record_weight": 2.0
+    },
+    {
+      "at_quantile": 0.5,
+      "target_cumulative_weight": 5.5,
+      "key": "g2b",
+      "x": 6.0,
+      "split_off_weight_into_lower_bin": 1.5,
+      "record_weight_remaining_for_higher_bins": 1.5,
+      "original_record_weight": 3.0
+    },
+    {
+      "at_quantile": 0.75,
+      "target_cumulative_weight": 8.25,
+      "key": "h2",
+      "x": 10.0,
+      "split_off_weight_into_lower_bin": 0.25,
+      "record_weight_remaining_for_higher_bins": 2.75,
+      "original_record_weight": 3.0
+    }
+  ],
+  "note": "边界处按权重拆分记录片段，资源随权重比例分配，无整条记录跨越人口阈值。"
+}
